@@ -29,7 +29,7 @@ const sql = require("sqlite");
 
 
 client.on("message", message => {
-	var prefix = "-";
+	var prefix = ".";
  if (message.content === "-help**)(") {
   const embed = new Discord.RichEmbed() 
       .setColor("#000000") 
@@ -102,7 +102,7 @@ client.on('message', message => {
   
   
   client.on('message', message => {
-    if (message.content === "-help-m") {
+    if (message.content === ".help-m") {
     let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#000000")
@@ -445,7 +445,7 @@ client.on('message', message => {
      });
 
     client.on('message', async msg => {
-    var prefix = "-";
+    var prefix = ".";
     var user = msg.author;
         if (msg.content === (prefix +'help')) {
         if(!msg.channel.guild) return msg.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
